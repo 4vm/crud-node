@@ -12,19 +12,19 @@ const construtores = [
   'McLaren'
 ]
 
-//retorna um
+//retornar um
 server.get('/construtores/:index', (req, res) => {
   const { index } = req.params
 
   return res.json(construtores[index])
 })
 
-//retorna todos
+//retornar todos
 server.get('/construtores', (req, res) => {
   return res.json(construtores)
 })
 
-//cria
+//criar
 server.post('/construtores', (req, res) => {
   const { name } = req.body
   construtores.push(name)
@@ -32,7 +32,7 @@ server.post('/construtores', (req, res) => {
   return res.json(construtores)
 })
 
-//atualiza
+//atualizar
 server.put('/construtores/:index', (req, res) => {
   const { index } = req.params
   const { name } = req.body
